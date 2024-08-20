@@ -9,5 +9,6 @@
     {% for cliente in clientes %}
         <p>{{ cliente }}</p>        
     {% endfor %}
+    <button><a href="{% url 'clientes:index' %}">Volver</a></button>
 </body>
 </html>
