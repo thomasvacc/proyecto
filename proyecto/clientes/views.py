@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Pais, Cliente
 
+def index(request):
+    return render(request, 'clientes/index.html')
 
 def pais_list(request):
     paises = Pais.objects.all()
