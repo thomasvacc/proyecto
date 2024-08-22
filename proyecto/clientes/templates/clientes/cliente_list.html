@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {% for cliente in clientes %}
-        <p>{{ cliente }}</p>        
-    {% endfor %}
+{% extends 'core/base.html' %}
+
+{% block header %}
+    Clientes
+{% endblock header %}
+
+{% block main %}
+    <div>
+        {% for cliente in clientes %}
+            <p>{{ cliente }}</p>        
+        {% endfor %}
+    </div>
     <button><a href="{% url 'clientes:index' %}">Volver</a></button>
-</body>
-</html>
+{% endblock main %}
