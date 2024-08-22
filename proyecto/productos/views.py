@@ -7,6 +7,6 @@ def index(request):
 
 
 def productocategoria_list(request):
-    productocategorias = ProductoCategoria.objects.all()
-    contexto = {'productocategorias': productocategorias}
+    productocategoria = ProductoCategoria.objects.all()
+    contexto = {'productocategoria': productocategoria}
     return render(request, 'productos/productocategoria_list.html', contexto)
