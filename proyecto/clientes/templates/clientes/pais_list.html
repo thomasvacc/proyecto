@@ -1,13 +1,13 @@
 {% extends 'core/base.html' %}
 
 {% block header %}
-    Clientes: Lista de clientes
+    Clientes: Lista de países
 {% endblock header %}
 
 {% block main %}
     <div>
-        {% for pais in paises %}
-            <p>{{ pais }}</p>        
+        {% for object in paises %}
+            <p>{{ object }}</p>        
         {% endfor %}
     </div>
     <button><a href="{% url 'clientes:index' %}">Volver</a></button>
