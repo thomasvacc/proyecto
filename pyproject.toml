@@ -33,6 +33,7 @@ build-backend = "hatchling.build"
 
 [tool.ruff]
 line-length = 100
+exclude = ["migrations", "manage.py"]
 
 [tool.ruff.format]
 # Cadenas con comillas simples simples
