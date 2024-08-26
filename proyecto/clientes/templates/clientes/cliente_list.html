@@ -7,8 +7,12 @@
 {% block main %}
     <div>
         {% for object in clientes %}
-            <p>{{ object }}</p>        
+            <p>
+                {{ object }}
+            </p>
         {% endfor %}
     </div>
-    <button><a href="{% url 'clientes:index' %}">Volver</a></button>
+    <button>
+        <a href="{% url 'clientes:index' %}">Volver</a>
+    </button>
 {% endblock main %}
