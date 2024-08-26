@@ -1,18 +1,18 @@
 {% extends 'core/base.html' %}
 
 {% block header %}
-    Clientes: Lista de clientes
+    Productos: Lista de categorías de productos
 {% endblock header %}
 
 {% block main %}
     <div>
-        {% for object in clientes %}
+        {% for object in productocategoria %}
             <p>
                 {{ object }}
             </p>
         {% endfor %}
     </div>
     <button>
-        <a href="{% url 'clientes:index' %}">Volver</a>
+        <a href="{% url 'productos:index' %}">Volver</a>
     </button>
 {% endblock main %}

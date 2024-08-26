@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+<<<<<<< HEAD:proyecto/proyecto/core/templates/core/base.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,3 +29,34 @@
     </div>
 </body>
 </html>
+=======
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Coderhouse</title>
+    </head>
+    <body style="display: grid;
+                 justify-items: center;
+                 align-items: center;
+                 height: 100vh">
+        <header>
+            <h1>
+
+                {% block header %}
+                {% endblock header %}
+
+            </h1>
+        </header>
+        <main>
+            {% include 'core/componentes/navbar.html' %}
+
+            {% block main %}
+            {% endblock main %}
+
+        </main>
+        <footer>
+            {% include 'core/componentes/footer.html' %}
+        </footer>
+    </body>
+</html>
+>>>>>>> 21b362a17eed3e4046a7d89e15b3a61edea0800e:proyecto/core/templates/core/base.html
