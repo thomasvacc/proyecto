@@ -1,6 +1,6 @@
 # Instalar `uv`desde https://docs.astral.sh/uv/
 # uv self update  (para actualizar)
-# uv sync  (o `uv init` si el archivo pyproject.toml no existe)
+# uv sync --no-install-project (o `uv init` si el archivo pyproject.toml no existe)
 
 [project]
 name = "proyecto"
