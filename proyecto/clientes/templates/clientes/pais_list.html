@@ -5,11 +5,17 @@
 {% endblock header %}
 
 {% block main %}
+    <form action="{% url 'clientes:pais_list' %}" method="get">
+        <input type="text" name="q" placeholder="Buscar..." >
+        <button type="submit">Buscar</button>
+    </form>
     <div>
         {% for object in paises %}
             <p>
                 {{ object }}
             </p>
+        {% empty %}
+            <p>No hay registros</p>
         {% endfor %}
     </div>
     <button>

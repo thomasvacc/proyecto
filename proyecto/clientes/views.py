@@ -9,7 +9,11 @@ def index(request):
 
 
 def pais_list(request):
-    paises = Pais.objects.all()
+    query = request.GET.get('q')
+    if query:
+        paises = Pais.objects.filter(nombre__icontains=query)
+    else:
+        paises = Pais.objects.all()
     contexto = {'paises': paises}
     return render(request, 'clientes/pais_list.html', contexto)
 
