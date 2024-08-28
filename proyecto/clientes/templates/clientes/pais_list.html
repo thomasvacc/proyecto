@@ -1,19 +1,20 @@
 {% extends 'core/base.html' %}
 
 {% block header %}
-    Clientes: Lista de países
+    App Clientes: Registros de Países
 {% endblock header %}
 
 {% block main %}
     <form action="{% url 'clientes:pais_list' %}" method="get">
-        <input type="text" name="q" placeholder="Buscar..." >
+        <input type="text" name="q" placeholder="Buscar..." />
         <button type="submit">Buscar</button>
+        <button>
+            <a href="{% url 'clientes:pais_create' %}">Crear Registro</a>
+        </button>
     </form>
     <div>
-        {% for object in paises %}
-            <p>
-                {{ object }}
-            </p>
+        {% for object in object_list %}
+            <p>{{ object }}</p>
         {% empty %}
             <p>No hay registros</p>
         {% endfor %}

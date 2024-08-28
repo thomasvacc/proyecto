@@ -1,18 +1,16 @@
 {% extends 'core/base.html' %}
 
 {% block header %}
-    Productos: Creación de categorías de productos
+    App Clientes: Formulario de Países
 {% endblock header %}
 
 {% block main %}
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">
-            Enviar
-        </button>
+        <button type="submit">Enviar</button>
     </form>
     <button>
-        <a href="{% url 'productos:index' %}">Volver</a>
+        <a href="{% url 'clientes:cliente_list' %}">Volver</a>
     </button>
 {% endblock main %}

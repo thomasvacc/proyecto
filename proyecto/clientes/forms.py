@@ -1,7 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 
-from .models import Pais
+from .models import Cliente, Pais
 
 
 class PaisForm(forms.ModelForm):
@@ -22,3 +22,10 @@ class PaisForm(forms.ModelForm):
                 'El nombre debe tener una longitud mínima de 3 letras o máxima de 50'
             )
         return nombre
+
+
+class ClienteForm(forms.ModelForm):
+    class Meta:
+        model = Cliente
+        fields = '__all__'
+        widgets = {'nacimiento': forms.DateInput(attrs={'type': 'date'})}

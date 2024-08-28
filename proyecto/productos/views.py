@@ -9,9 +9,13 @@ def index(request):
 
 
 def productocategoria_list(request):
-    productocategoria = ProductoCategoria.objects.all()
-    contexto = {'productocategoria': productocategoria}
-    return render(request, 'productos/productocategoria_list.html', contexto)
+    q = request.GET.get('q')
+    if q:
+        query = ProductoCategoria.objects.filter(nombre__icontains=q)
+    else:
+        query = ProductoCategoria.objects.all()
+    context = {'object_list': query}
+    return render(request, 'productos/productocategoria_list.html', context)
 
 
 def productocategoria_create(request):
@@ -25,4 +29,4 @@ def productocategoria_create(request):
             form.save()
             return redirect('productos:productocategoria_list')
 
-    return render(request, 'productos/productocategoria_create.html', {'form': form})
+    return render(request, 'productos/productocategoria_form.html', {'form': form})

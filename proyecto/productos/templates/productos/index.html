@@ -1,14 +1,11 @@
 {% extends 'core/base.html' %}
 
 {% block header %}
-    Productos
+    App Productos
 {% endblock header %}
 
 {% block main %}
     <button>
-        <a href="{% url 'productos:productocategoria_list' %}">Listar Categorías de Productos</a>
-    </button>
-    <button>
-        <a href="{% url 'productos:productocategoria_create' %}">Crear Categorías de Productos</a>
+        <a href="{% url 'productos:productocategoria_list' %}">Categorías de Productos</a>
     </button>
 {% endblock main %}

@@ -1,18 +1,16 @@
 {% extends 'core/base.html' %}
 
 {% block header %}
-    Clientes: Creación de países
+    App Clientes: Formulario de Clientes
 {% endblock header %}
 
 {% block main %}
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">
-            Enviar
-        </button>
+        <button type="submit">Enviar</button>
     </form>
     <button>
-        <a href="{% url 'clientes:index' %}">Volver</a>
+        <a href="{% url 'clientes:cliente_list' %}">Volver</a>
     </button>
 {% endblock main %}
