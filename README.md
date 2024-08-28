@@ -2,7 +2,7 @@
 
 ## Autor
 
-Esteban Acevedo: [Linkedin](linkedin.com/in/esteban-acevedo-aberastain)
+Esteban Acevedo: [Linkedin](https://www.linkedin.com/in/esteban-acevedo-aberastain/)
 
 ## Creación del repositorio y del proyecto Django
 
