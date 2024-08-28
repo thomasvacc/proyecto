@@ -12,13 +12,13 @@
             <a href="{% url 'productos:productocategoria_create' %}">Crear Registro</a>
         </button>
     </form>
-    <div>
+    <ul>
         {% for object in object_list %}
-            <p>{{ object }}</p>
+            <li>{{ object }}</li>
         {% empty %}
             <p>No hay registros</p>
         {% endfor %}
-    </div>
+    </ul>
     <button>
         <a href="{% url 'productos:index' %}">Volver</a>
     </button>
