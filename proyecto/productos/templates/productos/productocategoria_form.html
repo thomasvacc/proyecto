@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block header %}
+    App Productos: Formulario de Categorías de Productos
+{% endblock header %}
+
+{% block main %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+    <button>
+        <a href="{% url 'productos:productocategoria_list' %}">Volver</a>
+    </button>
+{% endblock main %}

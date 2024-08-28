@@ -79,7 +79,7 @@ wheels = [
 
 [[package]]
 name = "djlint"
-version = "1.34.1"
+version = "1.34.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -94,9 +94,9 @@ dependencies = [
     { name = "regex" },
     { name = "tqdm" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c4/a8/b8ed0b5e924985d3b4272940f785a7bf5baa41713dc30a0c087939aaf7c8/djlint-1.34.1.tar.gz", hash = "sha256:db93fa008d19eaadb0454edf1704931d14469d48508daba2df9941111f408346", size = 44066 }
+sdist = { url = "https://files.pythonhosted.org/packages/3a/0d/1f390dbcf6011503ffc5dc426ad00d30559d58cb7eb92ef6b7e1ee79cf7e/djlint-1.34.2.tar.gz", hash = "sha256:db9b2e59203a452b83532499bc243c749279090b905cc1f657973f78e7a31ddd", size = 44481 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/7f/0c/bf400cf2a7af5aaa45cc3c54805220dea0bc88b500b414379d37fd0aff12/djlint-1.34.1-py3-none-any.whl", hash = "sha256:96ff1c464fb6f061130ebc88663a2ea524d7ec51f4b56221a2b3f0320a3cfce8", size = 48988 },
+    { url = "https://files.pythonhosted.org/packages/ef/b8/6ab680e25c9856aeac93c0b0296e7649616a0c6c796db25c76612f3d4c55/djlint-1.34.2-py3-none-any.whl", hash = "sha256:4825389e395eb77371857c77f547fa5ebd1a644b1bc4fe9fed19d49a2786b9e5", size = 49419 },
 ]
 
 [[package]]
@@ -269,7 +269,7 @@ wheels = [
 
 [[package]]
 name = "proyecto"
-version = "2024.8.1"
+version = "2024.8.28"
 source = { editable = "." }
 dependencies = [
     { name = "django" },
