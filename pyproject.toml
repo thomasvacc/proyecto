@@ -1,14 +1,9 @@
-# Instalar `uv`desde https://docs.astral.sh/uv/
-# uv self update  (para actualizar)
-# uv sync --no-install-project (o `uv init` si el archivo pyproject.toml no existe)
-
 [project]
 name = "proyecto"
-version = "2024.8.1"
+version = "2024.8.28"
 description = "Proyecto de introducción al framework Django, del curso de Python de Coderhouse"
 requires-python = ">=3.12"
 
-# uv add django
 # uv add pillow
 dependencies = [
     "django>=5.1",
@@ -33,24 +28,23 @@ build-backend = "hatchling.build"
 
 [tool.ruff]
 line-length = 100
+
+extend-select = ["F", "I", "N", "A"] # Conjunto de reglas: N (nombres) R (refactorizaciones) I (importaciones) A (builtins) F (varios)
 exclude = [".venv", "migrations", "manage.py"]
 
 [tool.ruff.format]
-# Cadenas con comillas simples simples
-quote-style = "single"
+quote-style = "single"  # Cadenas con comillas simples simples
 
 [tool.ruff.lint]
-# Conjunto de reglas: N (nombres) R (refactorizaciones) I (importaciones) A (builtins) F (varios)
-extend-select = ["F", "I", "N", "R", "A"]
-ignore = ["F401"]   # F401 importaciones no usadas 
+ignore = ["F401"] # F401 importaciones no usadas 
 
 [tool.djlint]
 profile="django"
 use_gitignore=true
+close_void_tags=true
+max_line_length=100
 ignore="H021,T002,H030,H031"
 blank_line_before_tag="block"
 blank_line_after_tag="load,extends,endblock"
-max_line_length=100
-line_break_after_multiline_tag=false
-close_void_tags=true
 format_attribute_template_tags=true
+line_break_after_multiline_tag=false
