@@ -30,3 +30,9 @@ def productocategoria_create(request):
             return redirect('productos:productocategoria_list')
 
     return render(request, 'productos/productocategoria_form.html', {'form': form})
+
+
+def productocategoria_detail(request, pk: int):
+    query = ProductoCategoria.objects.get(id=pk)
+    context = {'object': query}
+    return render(request, 'productos/productocategoria_detail.html', context)
