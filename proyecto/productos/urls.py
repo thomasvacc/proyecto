@@ -11,4 +11,9 @@ urlpatterns = [
     path(
         'productocategoria/create', views.productocategoria_create, name='productocategoria_create'
     ),
+    path(
+        'productocategoria/detail/<int:pk>',
+        views.productocategoria_detail,
+        name='productocategoria_detail',
+    ),
 ]

@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+{% block header %}
+    App Productos: Vista en Detalle de Categorías de Productos
+{% endblock header %}
+
+{% block main %}
+    <ul>
+       <li>Nombre: {{ object.nombre }}</li>
+       <li>Descripción: {{ object.descripcion }}</li>
+    </ul>
+    <button>
+        <a href="{% url 'productos:productocategoria_list' %}">Volver</a>
+    </button>
+{% endblock main %}
