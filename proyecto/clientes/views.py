@@ -53,3 +53,9 @@ def cliente_create(request):
             return redirect('clientes:cliente_list')
 
     return render(request, 'clientes/cliente_form.html', {'form': form})
+
+
+def pais_detail(request, pk: int):
+    query = Pais.objects.get(id=pk)
+    context = {'object': query}
+    return render(request, 'clientes/pais_detail.html', context)
